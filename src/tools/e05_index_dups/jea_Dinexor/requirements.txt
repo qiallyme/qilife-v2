@@ -1,6 +1,0 @@
-Python 3.6 or later
-Flask
-pytesseract
-Pillow (PIL)
-pdf2image
-schedule

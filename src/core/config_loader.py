@@ -1,4 +1,4 @@
-# config_loader.py
+# config_loader.py - Part of the core module
 # This module handles loading and updating configuration settings from a .env file.
 import os
 from dotenv import load_dotenv
