@@ -16,7 +16,7 @@ def print_directory_tree(root_dir, show_files=True, max_depth=None, current_dept
     - exclude_dirs (list): List of directory names to exclude from traversal.
     """
     if exclude_dirs is None:
-        exclude_dirs = ['venv','__pycache__','data','logs','.git','.vscode','.idea','.pytest_cache','.venv','.DS_Store','.env','.env.local','.env.development.local','.env.test.local','.env.production.local']
+        exclude_dirs = ['venv','__pycache__','data','logs','.git','.vscode','.idea','.pytest_cache','.venv','.DS_Store','.env','.env.local','.env.development.local','.env.test.local','.env.production.local', 'Empty_Folders']
     if max_depth is not None and current_depth >= max_depth:
         return
 

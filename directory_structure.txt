@@ -1,0 +1,209 @@
+__A_inbox__/
+  ├── A00tmp_temp_/
+  ├── A01chk_checklists_/
+  │   ├── A01chkGEN_general_/
+  │   ├── A01chkPRO_projects_/
+  │   └── A01chkDLY_daily_/
+  └── A02ref_reference_/
+      ├── A02refART_articles_/
+      ├── A02refDOC_documents_/
+      └── A02refSRC_sources_/
+
+__R_resources__/
+  ├── R00for_forms_templates_/
+  │   ├── R00forTAX_tax_/
+  │   ├── R00forEMP_employment_/
+  │   └── R00forGEN_general_/
+  ├── R01gui_guides_/
+  │   ├── R01guiINT_internal_/
+  │   └── R01guiEXT_external_/
+  ├── R02sop_sops_/
+  │   ├── R02sopQIA_qially_/
+  │   └── R02sopSYS_systems_/
+  ├── R03too_tools_/
+  │   ├── R03tooSof_software_/
+  │   ├── R03tooMed_media_/
+  │   │   ├── R03tooMedSto_stock_/
+  │   │   ├── R03tooMedLog_logos_/
+  │   │   ├── R03tooMedPri_prints_/
+  │   │   └── R03tooMedPac_packages_/
+  │   ├── R03tooKit_kits_/
+  │   └── R03tooSnp_snippets_/
+  ├── R04cap_captures_/
+  │   ├── R04capIMG_images_/
+  │   └── R04capSCR_screenshots_/
+  ├── R05dev_code_/
+  │   ├── R05devPro_projects_/
+  │   ├── R05devScr_scripts_/
+  │   ├── R05devLis_lists_/
+  │   ├── R05devImp_imports_/
+  │   ├── R05devFil_filetypes_/
+  │   │   ├── R05devFilCSS_css_/
+  │   │   ├── R05devFilHTM_html_/
+  │   │   ├── R05devFilPY_py_/
+  │   │   ├── R05devFilJAV_java_/
+  │   │   ├── R05devFilJSN_json_/
+  │   │   ├── R05devFilPLI_plist_/
+  │   │   └── R05devFilMIS_misc_/
+  │   ├── R05devApp_apps_/
+  │   │   ├── R05devAppAHK_ahk_/
+  │   │   ├── R05devAppTem_templates_/
+  │   │   ├── R05devAppBkm_bookmarklets_/
+  │   │   ├── R05devAppCom_common_/
+  │   │   └── R05devAppMIS_misc_/
+  │   └── R05devExp_exports_/
+  └── R06pro_projects_/
+      ├── R06proCLI_client_/
+      ├── R06proINT_internal_/
+      └── R06proPUB_public_/
+
+__B_business__/
+  ├── B00ops_operations_/
+  │   ├── B00opsPOL_policies_/
+  │   ├── B00opsREP_reports_/
+  │   └── B00opsAUD_audits_/
+  ├── B01mar_marketing_/
+  │   ├── B01marCAM_campaigns_/
+  │   ├── B01marSOC_social_/
+  │   └── B01marADS_ads_/
+  └── B02hr_human_resources_/
+      ├── B02hrHIR_hiring_/
+      ├── B02hrTRN_training_/
+      └── B02hrREV_reviews_/
+
+__C_contacts__/
+  ├── C00cli_clients_/
+  │   ├── C00cliACT_active_/
+  │   ├── C00cliINAC_inactive_/
+  │   └── C00cliPRO_prospects_/
+  ├── C01fam_family_/
+  │   ├── C01famIMM_immediate_/
+  │   ├── C01famEXT_extended_/
+  │   └── C01famMIS_misc_/
+  └── C02frd_friends_/
+      ├── C02frdBES_besties_/
+      ├── C02frdWRK_work_/
+      └── C02frdMIS_misc_/
+
+__F_finance__/
+  ├── F00bud_budgeting_/
+  │   ├── F00budPLN_plans_/
+  │   ├── F00budTRK_tracking_/
+  │   └── F00budEXP_expenses_/
+  ├── F01inc_income_/
+  │   ├── F01incPAY_paystubs_/
+  │   ├── F01incINV_invoices_/
+  │   └── F01incSCH_schedules_/
+  ├── F02exp_expenses_/
+  │   ├── F02expREC_receipts_/
+  │   ├── F02expTRV_travel_/
+  │   └── F02expBIL_bills_/
+  ├── F03sav_savings_/
+  │   ├── F03savACC_accounts_/
+  │   ├── F03savTRF_transfers_/
+  │   └── F03savGOA_goals_/
+  ├── F04inv_investments_/
+  │   ├── F04invSTK_stocks_/
+  │   ├── F04invCRY_crypto_/
+  │   └── F04invREA_realestate_/
+  ├── F05deb_debts_/
+  │   ├── F05debLOA_loans_/
+  │   ├── F05debCRD_creditcards_/
+  │   └── F05debCOL_collection_/
+  ├── F06cre_credit_/
+  │   ├── F06creREP_reports_/
+  │   ├── F06creSCO_scores_/
+  │   └── F06creDIS_disputes_/
+  ├── F07ban_banking_/
+  │   ├── F07banCHK_checking_/
+  │   ├── F07banSAV_savings_/
+  │   └── F07banTRN_transfers_/
+  ├── F08ins_insurance_/
+  │   ├── F08insHEA_health_/
+  │   ├── F08insREN_renters_/
+  │   └── F08insLIF_life_/
+  ├── F09ret_retirement_/
+  │   ├── F09retIRA_ira_/
+  │   ├── F09ret401_401k_/
+  │   └── F09retPEN_pension_/
+  └── F10tax_tax_/
+      ├── F10tax2024_W2S_/
+      ├── F10tax2024_1099_/
+      └── F10tax0000PEN_pending_/
+
+__L_legal__/
+  ├── L00mat_matters_/
+  │   ├── L00matOPN_open_/
+  │   ├── L00matCLS_closed_/
+  │   └── L00matPOT_potential_/
+  ├── L01imm_immigration_/
+  │   ├── L01immAPP_applications_/
+  │   ├── L01immDOC_documents_/
+  │   └── L01immSUP_support_/
+  ├── L02dis_disputes_/
+  │   ├── L02disCUS_customer_/
+  │   ├── L02disVEN_vendor_/
+  │   └── L02disPER_personal_/
+  ├── L03ref_refunds_/
+  ├── L04vio_violations_/
+  └── L05doc_documents_/
+      ├── L05docID_id_/
+      ├── L05docAGR_agreements_/
+      └── L05docMIS_misc_/
+
+__P_private__/
+  ├── P00idn_identity_/
+  │   ├── P00idnDOC_documents_/
+  │   ├── P00idnIMG_images_/
+  │   └── P00idnID_ids_/
+  ├── P01med_medical_/
+  │   ├── P01medHIS_history_/
+  │   ├── P01medDOC_docs_/
+  │   └── P01medRX_prescriptions_/
+  ├── P02edu_education_/
+  │   ├── P02eduDIP_diplomas_/
+  │   ├── P02eduTRN_transcripts_/
+  │   └── P02eduCER_certificates_/
+  ├── P03hom_home_/
+  │   ├── P03homLEA_leases_/
+  │   ├── P03homREN_rent_/
+  │   └── P03homMNT_maintenance_/
+  ├── P04veh_vehicles_/
+  │   ├── P04vehREG_registration_/
+  │   ├── P04vehINS_insurance_/
+  │   └── P04vehREP_repairs_/
+  ├── P05emp_employment_/
+  │   ├── P05empCON_contracts_/
+  │   ├── P05empWAG_wages_/
+  │   └── P05empHIS_history_/
+  ├── P06ins_insurance_/
+  │   ├── P06insHEA_health_/
+  │   ├── P06insREN_renters_/
+  │   └── P06insLIF_life_/
+  ├── P07mem_memoirs_/
+  │   ├── P07memAUD_audios_/
+  │   ├── P07memBOK_book_/
+  │   ├── P07memMED_media_/
+  │   ├── P07memMIL_milestones_/
+  │   └── P07memJOU_journals_/
+  ├── P08act_activity_/
+  │   ├── P08actLOG_logs_/
+  │   ├── P08actSUM_summaries_/
+  │   └── P08actMAP_maps_/
+  ├── P09priMED_media_/
+  │   ├── P09priMEDVID_videos_/
+  │   ├── P09priMEDPIC_pics_/
+  │   └── P09priMEDAUD_audio_/
+  ├── P10pro_projects_/
+  │   ├── P10proWRK_work_/
+  │   ├── P10proPER_personal_/
+  │   └── P10proPLA_plans_/
+  ├── P11sec_secrets_/
+  │   ├── P11secTXT_texts_/
+  │   └── P11secIMG_images_/
+  └── P12pwd_passwords_/
+      ├── P12pwdWEB_websites_/
+      ├── P12pwdSYS_systems_/
+      └── P12pwdDEV_devices_/
+
+__Z_archive__/
