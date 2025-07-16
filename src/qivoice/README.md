@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🎙️ QiVoice
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Voice control, transcription, and text-to-speech powered by ElevenLabs and speech models.
 
 ---
 

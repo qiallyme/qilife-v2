@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🧠 QiNote
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Quantum-brain-style notes and node management system with ORBIT logic and metadata.
 
 ---
 

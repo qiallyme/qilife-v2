@@ -1,6 +1,6 @@
-# ⚙️ Core
+# ✨ EmpowerQNow (Qi713)
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Hosts spiritual logic, tarot systems, affirmations, elemental maps, and EmpowerQ philosophy.
 
 ---
 

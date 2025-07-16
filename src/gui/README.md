@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🖥️ GUI
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Provides graphical user interface components for local dashboards and tool interaction.
 
 ---
 

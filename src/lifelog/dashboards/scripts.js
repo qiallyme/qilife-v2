@@ -1,31 +1,25 @@
-// Example countdown function
-function startCountdown(id, endDate) {
-    const timerElement = document.getElementById(id);
-    function updateTimer() {
-        const now = new Date().getTime();
-        const distance = endDate - now;
-
-        if (distance < 0) {
-            timerElement.innerHTML = "EXPIRED";
-            timerElement.parentElement.classList.add('expiring-soon');
-            return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-        if (distance < 86400000) { // Less than 24 hours
-            timerElement.parentElement.classList.add('expiring-soon');
-        }
-    }
-
-    updateTimer();
-    setInterval(updateTimer, 1000);
+// Evacuation Countdown (Set your target date below)
+const evacTarget = new Date("2025-07-31T23:59:59");
+const evacCountdown = document.getElementById('evacCountdown');
+function updateEvacCountdown() {
+  const now = new Date();
+  const diff = evacTarget - now;
+  if (diff < 0) {
+    evacCountdown.textContent = "TIME'S UP!";
+    return;
+  }
+  const days = Math.floor(diff / (1000*60*60*24));
+  const hours = Math.floor((diff/(1000*60*60))%24);
+  const mins = Math.floor((diff/(1000*60))%60);
+  evacCountdown.textContent = `${days}d ${hours}h ${mins}m`;
 }
+setInterval(updateEvacCountdown, 1000);
+updateEvacCountdown();
 
-// Set your countdown dates here
-const moveOutDate = new Date('2025-07-30T
+// Placeholder for Lyft Progress (replace with real data or input logic)
+document.getElementById('lyftHours').textContent = "12h 20m"; // Example
+
+// Placeholder for Health Status & other cards
+document.getElementById('healthStatus').textContent = "BP OK • HYDRATED";
+document.getElementById('houseTasks').textContent = "3 Rooms To Go";
+document.getElementById('ebayStats').textContent = "14 Items";

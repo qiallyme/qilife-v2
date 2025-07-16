@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🤖 QAI
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Core logic for large language model prompts, responses, tool use, and memory chaining.
 
 ---
 

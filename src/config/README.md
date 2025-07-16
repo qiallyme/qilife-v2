@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🔧 Config
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Stores global settings, environment variables, paths, and constants used across QiLife modules.
 
 ---
 

@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 💬 QiMessage
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Handles SMS, email, and smart messaging pipelines using Twilio and AI.
 
 ---
 

@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 📊 LifeLog
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Manages vitals, journaling, daily reflection logs, and patterns synced to Notion or local DB.
 
 ---
 

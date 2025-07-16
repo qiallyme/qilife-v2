@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 📘 QiDocs
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Docusaurus-powered internal and external documentation portal for QiLife structure and usage.
 
 ---
 

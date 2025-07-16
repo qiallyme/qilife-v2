@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🧠 Context
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Handles active session memory, including the current user state, last interactions, and relevant working data.
 
 ---
 

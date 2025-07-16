@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🗃️ FileFlow
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Automates file intake, renaming, folder sorting, structure validation, and classification logic.
 
 ---
 

@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🧰 Tools
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Standalone utility scripts, helpers, and one-off processors not bound to core modules.
 
 ---
 

@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🧬 Memory
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Manages vector storage, embeddings, and long-term semantic search logic.
 
 ---
 

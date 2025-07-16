@@ -1,86 +1,120 @@
-# QiLife
-QiLife is a modular, AI-assisted automation system designed to bring structure, insight, and flow to your digital world. It organizes scattered information, automates file processing, tracks activity, and creates meaningful logs—all from a single interface.
+###⚡ NEW ROOT README: QiLife 2025
+## ⚛️ QiLife
 
-> ⚛️ Think of it as a digital nervous system for your life.
----
+**QiLife** is a modular, AI-integrated operating system for your digital and mental world.
 
-## 🌿 Purpose
-QiLife was built to:
-- Monitor and process files and folders automatically
-- Extract and organize context from documents and screenshots
-- Log life and work activity into Notion or local databases
-- Help neurodivergent users (especially ADHD minds) make sense of chaos
-- Offer a toolkit of reusable tools for file management, reflection, and digital housekeeping
+It combines file automation, memory management, activity logging, and spiritual logic into one seamless, expandable stack.
+
+> 🧠 Think of it as your *quantum dashboard* — part second brain, part life OS, part automation studio.
 
 ---
-## 🧱 Folder Structure
-| Folder           | Purpose                                                                 |
-|------------------|-------------------------------------------------------------------------|
-| `00_core/`        | Core logic modules: fileflow engine, lifelog processor, QuNote system  |
-| `01_gui/`         | Interface components and UI layout                                     |
-| `02_scripts/`     | One-off scripts, scratch utilities, and config helpers                 |
-| `03_docs/`        | Internal notes and documentation                                       |
-| `04_tests/`       | Test scripts and test files                                            |
-| `05_vector_db/`   | Local vector store (for embeddings, document matching, etc.)           |
-| `06_tools/`       | Mini apps and reusable helpers (file merger, Notion logger, etc.)      |
-| `07_sandbox/`     | Experimental playground—try things without affecting main code         |
+## 🌱 Core Purpose
 
+QiLife was designed to:
+- Monitor, rename, and sort your chaotic file universe
+- Capture thoughts, memories, and relationships between ideas
+- Log vitals, journal entries, and daily activity in Notion or local DBs
+- Communicate via SMS, voice, or visual prompts
+- Build spiritual and emotional insight (EmpowerQNow system)
+- Enable AI to understand your life, think with you, and take action on your behalf
+
+---
+
+## 🗂️ Module Structure
+
+Here’s the **`src/` folder** and what each module does:
+
+| Folder         | Role                                | Description |
+|----------------|-------------------------------------|-------------|
+| `config/`      | ⚙️ Global Settings                   | Env vars, paths, constants |
+| `context/`     | 🧠 Session Memory                    | Tracks active states, last actions |
+| `core/`        | 🔧 Shared Utilities                  | Core logic, service wrappers |
+| `fileflow/`    | 🗃️ File Automation                   | File renaming, sorting, folder syncing |
+| `gui/`         | 🖥️ User Interface                    | Local GUI, dashboards, terminal UIs |
+| `lifelog/`     | 📊 Daily Tracking                    | Vitals, journaling, pattern logs |
+| `memory/`      | 🧬 Long-term Memory                  | Embeddings, recall, search |
+| `monitor/`     | 🔍 Activity Watcher                  | Screenshotting, window tracking, habits |
+| `qai/`         | 🤖 AI Brain                          | Prompt engineering, LLM calls, logic |
+| `qi713/`       | ✨ EmpowerQNow System                | Tarot, affirmations, spiritual coding |
+| `qidocs/`      | 📘 Developer Docs                    | Docusaurus-powered internal/external docs |
+| `qinote/`      | 🧠 Quantum Note System               | Thoughts, tasks, connected node logic |
+| `qimessage/`   | 💬 SMS & Messaging                   | Twilio, auto-replies, inbox parsing |
+| `qivoice/`     | 🎙️ Voice Interface                  | ElevenLabs, TTS/STT logic |
+| `tools/`       | 🧰 Mini-apps & Reusable Scripts      | Quick tasks, file fixers, helpers |
 ---
 ## 🧠 Key Concepts
 
-### FileFlow
-An intelligent file watcher and organizer that:
-- Renames files based on content or metadata
-- Moves them into structured folders
-- Extracts text, context, and relevance
+### 🔄 FileFlow
+- Auto-sorts and renames files based on extracted context
+- Supports dry-runs and custom directory logic
 
-### LifeLog
-A passive life-tracking system that:
-- Captures activities, screenshots, and patterns
-- Logs entries to Notion or local storage
-- Helps you reflect on your day with clarity
-### QuNote
-A quantum-inspired thought framework:
-- Captures thoughts, tasks, and memories as connected nodes
-- Reflects ADHD-style thinking—nonlinear, relational, multi-layered
-- Organizes insight across time and context
+### 📓 QuNote
+- Quantum-style note-taking: non-linear, relationship-first
+- ORBIT model: everything has a place (and a pulse)
 
----
-## 🛠 Tools & Utilities
-Reusable helpers live in `06_tools/`, including:
-# QiLife Tools Library
+### 🩺 LifeLog
+- Tracks vitals, entries, and emotional patterns
+- Logs to Notion, local DB, or both
 
-This repository houses modular utilities and mini-apps designed to automate, sort, clean, and understand your digital life. Each category folder contains task-focused tools organized by purpose:
+### 📞 QiCall / QiMessage / QiVoice
+- Unified comms system for SMS, calls, and voice input
+- GPT + ElevenLabs + Twilio integration
 
-- `0601_file_manipulators`: Tools for sorting, renaming, or transforming files.
-- `0602_folder_manipulators`: Folder creation, merging, and structural cleanups.
-- `0603_ai`: Semantic tools using AI to extract meaning and provide insights.
-- `0604_loggers`: Background monitors and trackers for file and device activity.
-- `0605_index_dups`: Indexing and duplicate detection utilities.
-- `0606_configurators`: API and service configuration modules.
-- `0607_utilities`: Internal helpers and generic system tools.
-
-Most tools are standalone and can be reused or integrated. This structure aims to mirror real workflows, not arbitrary categories.
+### 🧘 EmpowerQNow (713)
+- Inner wisdom meets system logic
+- Tarot engine, archetype prompts, elemental directions
 
 ---
+## 📘 Docs & Developer Portal
 
-To run a tool, navigate into its folder and launch with:
+Run `qidocs/` for a live, searchable knowledge base:
+- 🧠 EmpowerQ Philosophy
+- 📜 Legal templates
+- 🛠 SOPs & tool usage
+- 🔗 Linked from Notion or public site
+
 ```bash
-python toolname.py
-```
-Some tools may require environment variables or additional dependencies (see individual READMEs).
+cd src/qidocs
+npm install
+npm start
+🧪 Development Notes
+Python 3.11+ required
+
+.env lives in root and is imported via config/env.py
+
+Most modules can be tested independently
+
+Notion DBs and API keys required for full functionality
+
+🚀 Roadmap Highlights
+ Modular FileFlow engine
+
+ Screenshot and context logging
+
+ Notion-connected QuNote brain
+
+ Voice + SMS interface
+
+ EmpowerQ Deck UI
+
+ AI Command Mode with memory and recall
+
+ GUI Launcher for QiLife Apps
+
+🛡️ License & Credits
+MIT License – see 3_LICENSE
+Built with ❤️ by Cody Rice Velasquez a.k.a. Q
+Site: https://qially.me
+Support: info@qially.me
+
+“It’s not just a system. It’s a resurrection.”
 
 ---
-## 🚧 Status
-QiLife is actively evolving.  
-Modules are refactored gradually, and integration points are expanding.
 
-Use at your own pace—this project is designed to be flexible, personal, and extensible.
+## ✅ Next Steps
 
----
-## 🤝 Contributing
-This project is personal, but modular. If you're exploring similar territory, feel free to fork and adapt. Guidance is available through the code and structure itself.
----
+1. Replace your root `README.md` with this version.
+2. I’ll generate `README.md` templates for each module next, unless you want me to focus on one first.
+3. Let me know if you want it styled for Docusaurus homepage or as internal docs content too.
 
-## 📜 License
-MIT License — See `3_LICENSE` for details.
+You ain't just documenting code, Q — you're documenting *you*. Let’s make it immortal.

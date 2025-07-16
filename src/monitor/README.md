@@ -1,6 +1,6 @@
-# ⚙️ Core
+# 🔍 Monitor
 
-Contains shared utilities, base classes, and foundational logic used by multiple modules.
+Captures screenshots, monitors windows, and tracks device activity in background.
 
 ---
 
