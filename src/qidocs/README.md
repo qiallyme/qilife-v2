@@ -1,21 +1,41 @@
-# 📘 QiDocs
+# Website
 
-Docusaurus-powered internal and external documentation portal for QiLife structure and usage.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
----
+## Installation
 
-## Structure
+```bash
+yarn
+```
 
-Describe the folder layout and important files here.
+## Local Development
 
----
+```bash
+yarn start
+```
 
-## Usage
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-Explain how this module is used in the QiLife system.
+## Build
 
----
+```bash
+yarn build
+```
 
-## Future Ideas
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
-Add any planned upgrades or known TODOs.
+## Deployment
+
+Using SSH:
+
+```bash
+USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```bash
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
