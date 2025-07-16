@@ -1,23 +1,45 @@
-# src/fileflow/folder_creator.py
-
-import argparse
-from pathlib import Path
+#!/usr/bin/env python3
+import sys
 import pandas as pd
+from pathlib import Path
 from rich import print
 
-def get_expected_from_excel(base_path: Path, excel_path: Path) -> list[Path]:
+def load_structure_df(file_path: Path) -> pd.DataFrame:
     """
-    Reads an Excel file with columns 'folder_Parent_Name' and 'folder_Name',
-    computes full paths, and returns a list of Paths under base_path.
+    Load folder structure from a CSV or Excel file.
+    CSV must have headers 'folder_Parent_Name' and 'folder_Name'.
+    Excel must be a valid .xls/.xlsx.
     """
-    df = pd.read_excel(excel_path)
-    df = df.fillna("")  # turn NaN → ""
+    suffix = file_path.suffix.lower()
+    if suffix == ".csv":
+        try:
+            return pd.read_csv(file_path)
+        except Exception as e:
+            print(f"[red]❌ Failed to read CSV: {e}[/]")
+            sys.exit(1)
+    elif suffix in (".xls", ".xlsx"):
+        try:
+            return pd.read_excel(file_path, engine="openpyxl")
+        except ImportError:
+            print("[red]❌ Missing dependency: install openpyxl to read Excel files.[/]")
+            sys.exit(1)
+        except Exception as e:
+            print(f"[red]❌ Failed to read Excel: {e}[/]")
+            sys.exit(1)
+    else:
+        print(f"[red]❌ Unsupported file type '{suffix}'. Use .csv, .xls, or .xlsx[/]")
+        sys.exit(1)
+
+def get_expected_from_df(base_path: Path, df: pd.DataFrame) -> list[Path]:
+    """Builds a list of expected folder Paths based on parent/name columns."""
+    df = df.fillna("")  # convert NaN → ""
     path_map = {}
     expected = []
-    # We assume the sheet is already sorted: parents before children
     for _, row in df.iterrows():
         parent = row["folder_Parent_Name"].strip()
-        name   = row["folder_Name"].strip()
+        name = row["folder_Name"].strip()
+        if not name:
+            continue
         if not parent or parent == ".":
             full = name
         else:
@@ -31,8 +53,9 @@ def get_expected_from_excel(base_path: Path, excel_path: Path) -> list[Path]:
 def get_missing_folders(expected: list[Path]) -> list[Path]:
     return [p for p in expected if not p.exists()]
 
-def sync_folder_structure(base_path: Path, excel: Path, dry_run: bool):
-    expected = get_expected_from_excel(base_path, excel)
+def sync_folder_structure(base_path: Path, struct_file: Path, dry_run: bool):
+    df = load_structure_df(struct_file)
+    expected = get_expected_from_df(base_path, df)
     missing = get_missing_folders(expected)
 
     if not missing:
@@ -56,14 +79,22 @@ def sync_folder_structure(base_path: Path, excel: Path, dry_run: bool):
         print(f"[green]Created:[/] {p}")
 
 if __name__ == "__main__":
-    p = argparse.ArgumentParser()
-    p.add_argument("--base",  type=Path, required=True,  help="Base folder to sync under")
-    p.add_argument("--excel", type=Path, required=True,  help="Path to Folder_Structure.xlsx")
-    p.add_argument("--dry-run", action="store_true", help="List only, do not create")
-    args = p.parse_args()
+    struct_input = input("Enter path to your folder-structure file (.csv/.xls/.xlsx): ").strip()
+    struct_path = Path(struct_input).expanduser().resolve()
+    if not struct_path.is_file():
+        print(f"[red]❌ File not found: {struct_path}[/]")
+        sys.exit(1)
 
-    sync_folder_structure(
-        base_path=args.base,
-        excel=args.excel,
-        dry_run=args.dry_run
-    )
+    base_input = input("Enter the base directory to review/create: ").strip()
+    base_path = Path(base_input).expanduser().resolve()
+    if not base_path.exists():
+        if input(f"Directory {base_path} does not exist. Create it? [y/N]: ").strip().lower() == "y":
+            base_path.mkdir(parents=True, exist_ok=True)
+            print(f"[green]Created base directory: {base_path}[/]")
+        else:
+            print("[red]Aborted[/]")
+            sys.exit(1)
+
+    dry_run = input("Dry run only? (list missing without creating) [Y/n]: ").strip().lower() != "n"
+
+    sync_folder_structure(base_path=base_path, struct_file=struct_path, dry_run=dry_run)

@@ -38,3 +38,17 @@ Werkzeug==2.1.2
 pytest==7.1.2
 beautifulsoup4==4.12.0
 streamlit
+pytesseract
+Pillow
+pdfplumber
+python-docx
+python-pptx
+pandas
+openai
+moviepy
+# Optional dependencies
+notion-client   # For Notion integration
+watchdog        # For file system monitoring            
+moviepy # For video processing
+cloudinary # For media storage
+cloudinary==1.34.0

@@ -1,0 +1,207 @@
+folder_Id,folder_Name,folder_Parent_Id,folder_Parent_Name,folder_Path,folder_Notes,folder_Status,folder_Level,sort_order,folder_Created_Date,folder_Tags,rename_only,sync_structure,folder_Children,folder_Last_Updated,folder_Last_Modified_By
+206,A_inbox_,,,,,New,1,1,13-Jul-25,"Personal_Management, Resource, Task_Tracker",No,No,"A02ref_reference_ , A01chk_checklists_ , A00tmp_temp_ ",7/13/2025 8:34,System
+6,A00tmp_temp_,206,A_inbox_ ,,,New,2,2,13-Jul-25,Temporary Collection,No,No,,7/13/2025 8:34,System
+7,A01chk_checklists_,206,A_inbox_ ,,,New,2,3,13-Jul-25,Task_Tracker,No,No,"A01chkPRO_projects_ , A01chkGEN_general_ , A01chkDLY_daily_ ",7/13/2025 8:32,System
+11,A01chkDLY_daily_,7,A01chk_checklists_ ,,,New,3,4,13-Jul-25,DailyReference,No,No,,7/13/2025 8:32,System
+5,A01chkGEN_general_,7,A01chk_checklists_ ,,,New,3,5,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:32,System
+4,A01chkPRO_projects_,7,A01chk_checklists_ ,,,New,3,6,13-Jul-25,Project,No,No,,7/13/2025 8:32,System
+10,A02ref_reference_,206,A_inbox_ ,,,New,2,7,13-Jul-25,Reference,No,No,"A02refSRC_sources_ , A02refDOC_documents_ , A02refART_articles_ ",7/13/2025 8:32,System
+8,A02refART_articles_,10,A02ref_reference_ ,,,New,3,8,13-Jul-25,Reference,No,No,,7/13/2025 8:32,System
+15,A02refDOC_documents_,10,A02ref_reference_ ,,,New,3,9,13-Jul-25,Reference,No,No,,7/13/2025 8:32,System
+13,A02refSRC_sources_,10,A02ref_reference_ ,,,New,3,10,13-Jul-25,Reference,No,No,,7/13/2025 8:32,System
+62,B_business_,,,,,New,1,11,13-Jul-25,"Important, Project, Reference",No,No,"B02hr_human_resources_ , B01mar_marketing_ , B00ops_operations_ ",7/13/2025 8:32,System
+61,B00ops_operations_,62,B_business_,,,New,2,12,13-Jul-25,"Important, Project, Resource",No,No,"B00opsREP_reports_ , B00opsPOL_policies_ , B00opsAUD_audits_ ",7/13/2025 8:32,System
+64,B00opsAUD_audits_,61,B00ops_operations_ ,,,New,3,13,13-Jul-25,Project,No,No,,7/13/2025 8:32,System
+63,B00opsPOL_policies_,61,B00ops_operations_ ,,,New,3,14,13-Jul-25,"Important, Reference",No,No,,7/13/2025 8:32,System
+60,B00opsREP_reports_,61,B00ops_operations_ ,,,New,3,15,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:32,System
+70,B01mar_marketing_,62,B_business_,,,New,2,16,13-Jul-25,"Important, Project, marketing",No,No,"B01marSOC_social_ , B01marCAM_campaigns_ , B01marADS_ads_ ",7/13/2025 8:33,System
+73,B01marADS_ads_,70,B01mar_marketing_ ,,,New,3,17,13-Jul-25,"advertisement, campaign, marketing",No,No,,7/13/2025 8:33,System
+69,B01marCAM_campaigns_,70,B01mar_marketing_ ,,,New,3,18,13-Jul-25,"Important, Project, campaign",No,No,,7/13/2025 8:33,System
+66,B01marSOC_social_,70,B01mar_marketing_ ,,,New,3,19,13-Jul-25,"Important, Project, social",No,No,,7/13/2025 8:33,System
+72,B02hr_human_resources_,62,B_business_,,,New,2,20,13-Jul-25,"Important, Work",No,No,"B02hrTRN_training_ , B02hrREV_reviews_ , B02hrHIR_hiring_ ",7/13/2025 8:22,System
+67,B02hrHIR_hiring_,72,B02hr_human_resources_ ,,,New,3,21,13-Jul-25,"Important, Reference, Work",No,No,,7/13/2025 8:22,System
+65,B02hrREV_reviews_,72,B02hr_human_resources_ ,,,New,3,22,13-Jul-25,"Important, Project, review",No,No,,7/13/2025 8:22,System
+71,B02hrTRN_training_,72,B02hr_human_resources_ ,,,New,3,23,13-Jul-25,"development, onboarding, training",No,No,,7/13/2025 8:22,System
+68,C_contacts_,,,,,New,1,24,13-Jul-25,"Important, Reference, contacts",No,No,"C02frd_friends_ , C01fam_family_ , C00cli_clients_ ",7/13/2025 8:22,System
+74,C00cli_clients_,68,C_contacts_,,,New,2,25,13-Jul-25,"Important, Project",No,No,"C00cliPRO_prospects_ , C00cliINAC_inactive_ , C00cliACT_active_ ",7/13/2025 8:22,System
+79,C00cliACT_active_,74,C00cli_clients_ ,,,New,3,26,13-Jul-25,"activity_tracker, client_management, client_project",No,No,,7/13/2025 8:22,System
+77,C00cliINAC_inactive_,74,C00cli_clients_ ,,,New,3,27,13-Jul-25,"Level_3, inactive, status_new",No,No,,7/13/2025 8:22,System
+75,C00cliPRO_prospects_,74,C00cli_clients_ ,,,New,3,28,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+76,C01fam_family_,68,C_contacts_,,,New,2,29,13-Jul-25,"family, family_management, personal_relationships",No,No,"C01famMIS_misc_ , C01famIMM_immediate_ , C01famEXT_extended_ ",7/13/2025 8:22,System
+82,C01famEXT_extended_,76,C01fam_family_ ,,,New,3,30,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+81,C01famIMM_immediate_,76,C01fam_family_ ,,,New,3,31,13-Jul-25,"family_management, immediate, urgent",No,No,,7/13/2025 8:22,System
+78,C01famMIS_misc_,76,C01fam_family_ ,,,New,3,32,13-Jul-25,"Important, Project",No,No,,7/13/2025 8:22,System
+80,C02frd_friends_,68,C_contacts_,,,New,2,33,13-Jul-25,"Personal, Reference, friends",No,No,"C02frdWRK_work_ , C02frdMIS_misc_ , C02frdBES_besties_ ",7/13/2025 8:22,System
+83,C02frdBES_besties_,80,C02frd_friends_ ,,,New,3,34,13-Jul-25,Personal,No,No,,7/13/2025 8:22,System
+89,C02frdMIS_misc_,80,C02frd_friends_ ,,,New,3,35,13-Jul-25,Resource,No,No,,7/13/2025 8:22,System
+88,C02frdWRK_work_,80,C02frd_friends_ ,,,New,3,36,13-Jul-25,Work,No,No,,7/13/2025 8:22,System
+86,F_finance_,,,,,New,1,37,13-Jul-25,finance,No,No,"F08ins_insurance_ , F07ban_banking_ , F06cre_credit_ , F10tax_tax_ , F09ret_retirement_ , F05deb_debts_ , F04inv_investments_ , F03sav_savings_ , F02exp_expenses_ , F01inc_income_ , F00bud_budgeting_ ",7/13/2025 8:22,System
+85,F00bud_budgeting_,86,F_finance_,,,New,2,38,13-Jul-25,Project,No,No,"F00budTRK_tracking_ , F00budPLN_plans_ , F00budEXP_expenses_ ",7/13/2025 8:22,System
+91,F00budEXP_expenses_,85,F00bud_budgeting_ ,,,New,3,39,13-Jul-25,"budgeting, expenses, financial_management",No,No,,7/13/2025 8:22,System
+84,F00budPLN_plans_,85,F00bud_budgeting_ ,,,New,3,40,13-Jul-25,"Important, Project",No,No,,7/13/2025 8:22,System
+92,F00budTRK_tracking_,85,F00bud_budgeting_ ,,,New,3,41,13-Jul-25,Tracking,No,No,,7/13/2025 8:22,System
+90,F01inc_income_,86,F_finance_,,,New,2,42,13-Jul-25,"Important, Reference, Resource",No,No,"F01incSCH_schedules_ , F01incPAY_paystubs_ , F01incINV_invoices_ ",7/13/2025 8:22,System
+99,F01incINV_invoices_,90,F01inc_income_ ,,,New,3,43,13-Jul-25,"Important, Reference, invoices",No,No,,7/13/2025 8:22,System
+87,F01incPAY_paystubs_,90,F01inc_income_ ,,,New,3,44,13-Jul-25,"Important, Reference, Resource",No,No,,7/13/2025 8:22,System
+95,F01incSCH_schedules_,90,F01inc_income_ ,,,New,3,45,13-Jul-25,schedule_management,No,No,,7/13/2025 8:22,System
+102,F02exp_expenses_,86,F_finance_,,,New,2,46,13-Jul-25,"Important, Project, Reference",No,No,"F02expTRV_travel_ , F02expREC_receipts_ , F02expBIL_bills_ ",7/13/2025 8:22,System
+96,F02expBIL_bills_,102,F02exp_expenses_ ,,,New,3,47,13-Jul-25,"bills, expenses, financial_management",No,No,,7/13/2025 8:22,System
+97,F02expREC_receipts_,102,F02exp_expenses_ ,,,New,3,48,13-Jul-25,"expense_record, financial_document, receipts",No,No,,7/13/2025 8:22,System
+100,F02expTRV_travel_,102,F02exp_expenses_ ,,,New,3,49,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+98,F03sav_savings_,86,F_finance_,,,New,2,50,13-Jul-25,"budget, finance, savings",No,No,"F03savTRF_transfers_ , F03savGOA_goals_ , F03savACC_accounts_ ",7/13/2025 8:22,System
+94,F03savACC_accounts_,98,F03sav_savings_ ,,,New,3,51,13-Jul-25,"accounts, finance, savings",No,No,,7/13/2025 8:22,System
+93,F03savGOA_goals_,98,F03sav_savings_ ,,,New,3,52,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+101,F03savTRF_transfers_,98,F03sav_savings_ ,,,New,3,53,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+111,F04inv_investments_,86,F_finance_,,,New,2,54,13-Jul-25,"Important, Project, Reference",No,No,"F04invSTK_stocks_ , F04invREA_realestate_ , F04invCRY_crypto_ ",7/13/2025 8:22,System
+103,F04invCRY_crypto_,111,F04inv_investments_ ,,,New,3,55,13-Jul-25,"crypto, finance, investment",No,No,,7/13/2025 8:22,System
+109,F04invREA_realestate_,111,F04inv_investments_ ,,,New,3,56,13-Jul-25,"finance, investment, real_estate",No,No,,7/13/2025 8:22,System
+105,F04invSTK_stocks_,111,F04inv_investments_ ,,,New,3,57,13-Jul-25,"finance, inventory, stocks",No,No,,7/13/2025 8:22,System
+107,F05deb_debts_,86,F_finance_,,,New,2,58,13-Jul-25,"Important, Personal, Resource",No,No,"F05debLOA_loans_ , F05debCRD_creditcards_ , F05debCOL_collection_ ",7/13/2025 8:22,System
+108,F05debCOL_collection_,107,F05deb_debts_ ,,,New,3,59,13-Jul-25,Temporary Collection,No,No,,7/13/2025 8:22,System
+106,F05debCRD_creditcards_,107,F05deb_debts_ ,,,New,3,60,13-Jul-25,"Important, Personal_Management, Resource",No,No,,7/13/2025 8:22,System
+110,F05debLOA_loans_,107,F05deb_debts_ ,,,New,3,61,13-Jul-25,"Important, Project, loans",No,No,,7/13/2025 8:22,System
+104,F06cre_credit_,86,F_finance_,,,New,2,62,13-Jul-25,"Important, Project",No,No,"F06creSCO_scores_ , F06creREP_reports_ , F06creDIS_disputes_ ",7/13/2025 8:22,System
+117,F06creDIS_disputes_,104,F06cre_credit_ ,,,New,3,63,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+112,F06creREP_reports_,104,F06cre_credit_ ,,,New,3,64,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+113,F06creSCO_scores_,104,F06cre_credit_ ,,,New,3,65,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+118,F07ban_banking_,86,F_finance_,,,New,2,66,13-Jul-25,"banking, finance, management",No,No,"F07banTRN_transfers_ , F07banSAV_savings_ , F07banCHK_checking_ ",7/13/2025 8:22,System
+116,F07banCHK_checking_,118,F07ban_banking_ ,,,New,3,67,13-Jul-25,"F07banCHK, Level_3, checking",No,No,,7/13/2025 8:22,System
+121,F07banSAV_savings_,118,F07ban_banking_ ,,,New,3,68,13-Jul-25,"budgeting, financial, savings",No,No,,7/13/2025 8:22,System
+114,F07banTRN_transfers_,118,F07ban_banking_ ,,,New,3,69,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+119,F08ins_insurance_,86,F_finance_,,,New,2,70,13-Jul-25,"Important, Reference, insurance",No,No,"F08insREN_renters_ , F08insLIF_life_ , F08insHEA_health_ ",7/13/2025 8:22,System
+120,F08insHEA_health_,119,F08ins_insurance_ ,,,New,3,71,13-Jul-25,"health, insurance, wellness",No,No,,7/13/2025 8:22,System
+127,F08insLIF_life_,119,F08ins_insurance_ ,,,New,3,72,13-Jul-25,"Important, Personal",No,No,,7/13/2025 8:22,System
+115,F08insREN_renters_,119,F08ins_insurance_ ,,,New,3,73,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+125,F09ret_retirement_,86,F_finance_,,,New,2,74,13-Jul-25,"Financial_Planning, life_transition, retirement",No,No,"F09retPEN_pension_ , F09retIRA_ira_ , F09ret401_401k_ ",7/13/2025 8:22,System
+122,F09ret401_401k_,125,F09ret_retirement_ ,,,New,3,75,13-Jul-25,"Financial_Planning, Investment_Management, Retirement_Savings",No,No,,7/13/2025 8:22,System
+129,F09retIRA_ira_,125,F09ret_retirement_ ,,,New,3,76,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+123,F09retPEN_pension_,125,F09ret_retirement_ ,,,New,3,77,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+128,F10tax_tax_,86,F_finance_,,,New,2,78,13-Jul-25,"Important, Project, Reference",No,No,F10tax2025_Pending ,7/13/2025 8:22,System
+207,F10tax2025_Pending,128,F10tax_tax_ ,,,New,3,79,13-Jul-25,"Important, Project, Reference",No,No,F10tax2025PenInc_Income ,7/13/2025 8:22,System
+124,F10tax2025PenInc_Income,207,F10tax2025_Pending ,,,New,4,80,13-Jul-25,"Important, Reference, Tax_Document",No,No,F10tax2025PenIncW2s_W2s ,7/13/2025 8:22,System
+126,F10tax2025PenIncW2s_W2s,124,F10tax2025PenInc_Income ,,,Active,5,81,13-Jul-25,"Archive, Important, Reference",No,No,"F10tax2025PenIncW2sCjr_Rice-Velasquez, Cody J. ",7/13/2025 8:22,System
+131,"F10tax2025PenIncW2sCjr_Rice-Velasquez, Cody J.",126,F10tax2025PenIncW2s_W2s ,,,Update,6,82,13-Jul-25,"Important, Personal, Reference",No,No,F10tax2025PenIncW2sCjrMSI_MSIL ,7/13/2025 8:22,System
+208,F10tax2025PenIncW2sCjrMSI_MSIL,131,"F10tax2025PenIncW2sCjr_Rice-Velasquez, Cody J. ",,,Deactivate,7,83,13-Jul-25,"Important, Reference, Tax_Document",No,No,F10tax2025PenIncW2sCjrMSIBon_Bonus ,7/13/2025 8:22,System
+209,F10tax2025PenIncW2sCjrMSIBon_Bonus,208,F10tax2025PenIncW2sCjrMSI_MSIL ,,,Deprecated,8,84,13-Jul-25,Archive,No,No,F10tax2025PenIncW2sCjrMSIBon1st_1st Quarter ,7/13/2025 8:22,System
+210,F10tax2025PenIncW2sCjrMSIBon1st_1st Quarter,209,F10tax2025PenIncW2sCjrMSIBon_Bonus ,,,Archived,9,85,13-Jul-25,Archive,No,No,,7/13/2025 8:22,System
+130,L_legal_,,,,,New,1,86,13-Jul-25,"Important, Reference, legal",No,No,"L05doc_documents_ , L04vio_violations_ , L03ref_refunds_ , L02dis_disputes_ , L01imm_immigration_ , L00mat_matters_ ",7/13/2025 8:22,System
+134,L00mat_matters_,130,L_legal_,,,New,2,87,13-Jul-25,L00mat_matters,No,No,"L00matPOT_potential_ , L00matOPN_open_ , L00matCLS_closed_ ",7/13/2025 8:22,System
+133,L00matCLS_closed_,134,L00mat_matters_ ,,,New,3,88,13-Jul-25,"Important, Project",No,No,,7/13/2025 8:22,System
+132,L00matOPN_open_,134,L00mat_matters_ ,,,New,3,89,13-Jul-25,L00matOPN_open,No,No,,7/13/2025 8:22,System
+139,L00matPOT_potential_,134,L00mat_matters_ ,,,New,3,90,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+135,L01imm_immigration_,130,L_legal_ ,,,New,2,91,13-Jul-25,"Important, Project, Resource",No,No,"L01immSUP_support_ , L01immDOC_documents_ , L01immAPP_applications_ ",7/13/2025 8:22,System
+136,L01immAPP_applications_,135,L01imm_immigration_ ,,,New,3,92,13-Jul-25,"Important, Project, application",No,No,,7/13/2025 8:22,System
+138,L01immDOC_documents_,135,L01imm_immigration_ ,,,New,3,93,13-Jul-25,,No,No,,7/13/2025 8:22,System
+137,L01immSUP_support_,135,L01imm_immigration_ ,,,New,3,94,13-Jul-25,"Important, Project, support",No,No,,7/13/2025 8:22,System
+140,L02dis_disputes_,130,L_legal_ ,,,New,2,95,13-Jul-25,"Important, Project, Reference",No,No,"L02disVEN_vendor_ , L02disPER_personal_ , L02disCUS_customer_ ",7/13/2025 8:22,System
+143,L02disCUS_customer_,140,L02dis_disputes_ ,,,New,3,96,13-Jul-25,"Important, Work, customer_management",No,No,,7/13/2025 8:22,System
+141,L02disPER_personal_,140,L02dis_disputes_ ,,,New,3,97,13-Jul-25,"Personal, Personal_Management",No,No,,7/13/2025 8:22,System
+142,L02disVEN_vendor_,140,L02dis_disputes_ ,,,New,,98,13-Jul-25,"Important, Work",No,No,,7/13/2025 8:22,System
+147,L03ref_refunds_,130,L_legal_ ,,,New,2,99,13-Jul-25,Reference,No,No,,7/13/2025 8:22,System
+149,L04vio_violations_,130,L_legal_ ,,,New,2,100,13-Jul-25,"Important, Project, violations",No,No,,7/13/2025 8:22,System
+144,L05doc_documents_,130,L_legal_ ,,,New,2,101,13-Jul-25,,No,No,"L05docMIS_misc_ , L05docID_id_ , L05docAGR_agreements_ ",7/13/2025 8:22,System
+146,L05docAGR_agreements_,144,L05doc_documents_ ,,,New,3,102,13-Jul-25,"Important, Reference, Resource",No,No,,7/13/2025 8:22,System
+148,L05docID_id_,144,L05doc_documents_ ,,,New,3,103,13-Jul-25,Workspace,No,No,,7/13/2025 8:22,System
+145,L05docMIS_misc_,144,L05doc_documents_ ,,,New,3,104,13-Jul-25,"L05docMIS, miscellaneous",No,No,,7/13/2025 8:22,System
+155,P_private_,,,,,New,1,105,13-Jul-25,"Personal, Personal_Private",No,No,"P07mem_memoirs_ , P06ins_insurance_ , P11sec_secrets_ , P09priMED_media_ , P08act_activity_ , P05emp_employment_ , P04veh_vehicles_ , P03hom_home_ , P02edu_education_ , P01med_medical_ , P00idn_identity_ , P10pro_projects_ ",7/13/2025 8:22,System
+150,P00idn_identity_,155,P_private_ ,,,New,2,106,13-Jul-25,"Personal, Task_Tracker",No,No,"P00idnIMG_images_ , P00idnID_ids_ ",7/13/2025 8:22,System
+152,P00idnDOC_documents_,151,P00idnID_ids_ ,,,New,4,107,13-Jul-25,Resource,No,No,,7/13/2025 8:22,System
+151,P00idnID_ids_,150,P00idn_identity_ ,,,New,3,108,13-Jul-25,"Important, Project, ProjectID",No,No,P00idnDOC_documents_ ,7/13/2025 8:22,System
+153,P00idnIMG_images_,150,P00idn_identity_ ,,,New,3,109,13-Jul-25,"image_collection, media_assets, visual_resources",No,No,,7/13/2025 8:22,System
+154,P01med_medical_,155,P_private_ ,,,New,2,110,13-Jul-25,medical,No,No,"P01medRX_prescriptions_ , P01medHIS_history_ , P01medDOC_docs_ ",7/13/2025 8:22,System
+160,P01medDOC_docs_,154,P01med_medical_ ,,,New,3,111,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+157,P01medHIS_history_,154,P01med_medical_ ,,,New,3,112,13-Jul-25,"health_information, medical_history, patient_records",No,No,,7/13/2025 8:22,System
+161,P01medRX_prescriptions_,154,P01med_medical_ ,,,New,3,113,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+158,P02edu_education_,155,P_private_ ,,,New,2,114,13-Jul-25,"Important, Reference, education",No,No,"P02eduTRN_transcripts_ , P02eduDIP_diplomas_ , P02eduCER_certificates_ ",7/13/2025 8:22,System
+164,P02eduCER_certificates_,158,P02edu_education_ ,,,New,3,115,13-Jul-25,"certification, education, personal_development",No,No,,7/13/2025 8:22,System
+156,P02eduDIP_diplomas_,158,P02edu_education_ ,,,New,3,116,13-Jul-25,"Level3, diplomas, education",No,No,,7/13/2025 8:22,System
+162,P02eduTRN_transcripts_,158,P02edu_education_ ,,,New,3,117,13-Jul-25,"education, training, transcripts",No,No,,7/13/2025 8:22,System
+163,P03hom_home_,155,P_private_ ,,,New,2,118,13-Jul-25,"Personal, Workspace",No,No,"P03homREN_rent_ , P03homMNT_maintenance_ , P03homLEA_leases_ ",7/13/2025 8:22,System
+159,P03homLEA_leases_,163,P03hom_home_ ,,,New,3,119,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+172,P03homMNT_maintenance_,163,P03hom_home_ ,,,New,3,120,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+169,P03homREN_rent_,163,P03hom_home_ ,,,New,3,121,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+173,P04veh_vehicles_,155,P_private_ ,,,New,2,122,13-Jul-25,"Important, Project, Reference",No,No,"P04vehREP_repairs_ , P04vehREG_registration_ , P04vehINS_insurance_ ",7/13/2025 8:22,System
+174,P04vehINS_insurance_,173,P04veh_vehicles_ ,,,New,3,123,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+165,P04vehREG_registration_,173,P04veh_vehicles_ ,,,New,3,124,13-Jul-25,"compliance, registration, vehicle_management",No,No,,7/13/2025 8:22,System
+168,P04vehREP_repairs_,173,P04veh_vehicles_ ,,,New,3,125,13-Jul-25,"Important, Project, vehicle_repairs",No,No,,7/13/2025 8:22,System
+167,P05emp_employment_,155,P_private_ ,,,New,2,126,13-Jul-25,Project,No,No,"P05empWAG_wages_ , P05empHIS_history_ , P05empCON_contracts_ ",7/13/2025 8:22,System
+171,P05empCON_contracts_,167,P05emp_employment_ ,,,New,3,127,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+166,P05empHIS_history_,167,P05emp_employment_ ,,,New,3,128,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+175,P05empWAG_wages_,167,P05emp_employment_ ,,,New,3,129,13-Jul-25,"Important, Reference, Work",No,No,,7/13/2025 8:22,System
+170,P06ins_insurance_,155,P_private_ ,,,New,2,130,13-Jul-25,"Important, Project, Reference",No,No,"P06insREN_renters_ , P06insLIF_life_ , P06insHEA_health_ ",7/13/2025 8:22,System
+182,P06insHEA_health_,170,P06ins_insurance_ ,,,New,3,131,13-Jul-25,health,No,No,,7/13/2025 8:22,System
+183,P06insLIF_life_,170,P06ins_insurance_ ,,,New,3,132,13-Jul-25,life_management,No,No,,7/13/2025 8:22,System
+180,P06insREN_renters_,170,P06ins_insurance_ ,,,New,3,133,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+181,P07mem_memoirs_,155,P_private_ ,,,New,2,134,13-Jul-25,"Personal, Project, Resource",No,No,"P07memMIL_milestones_ , P07memMED_media_ , P07memJOU_journals_ , P07memBOK_book_ , P07memAUD_audios_ ",7/13/2025 8:22,System
+176,P07memAUD_audios_,181,P07mem_memoirs_ ,,,New,3,135,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+178,P07memBOK_book_,181,P07mem_memoirs_ ,,,New,3,136,13-Jul-25,"P07memBOK, book",No,No,,7/13/2025 8:22,System
+179,P07memJOU_journals_,181,P07mem_memoirs_ ,,,New,3,137,13-Jul-25,"Important, Personal, journals",No,No,,7/13/2025 8:22,System
+184,P07memMED_media_,181,P07mem_memoirs_ ,,,New,3,138,13-Jul-25,"Project, Temporary Collection",No,No,,7/13/2025 8:22,System
+177,P07memMIL_milestones_,181,P07mem_memoirs_ ,,,New,3,139,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+189,P08act_activity_,155,P_private_ ,,,New,2,140,13-Jul-25,"Personal_Management, Task_Tracker, activity",No,No,"P08actSUM_summaries_ , P08actMAP_maps_ , P08actLOG_logs_ ",7/13/2025 8:22,System
+187,P08actLOG_logs_,189,P08act_activity_ ,,,New,3,141,13-Jul-25,"Project, Reference, Resource",No,No,,7/13/2025 8:22,System
+185,P08actMAP_maps_,189,P08act_activity_ ,,,New,3,142,13-Jul-25,"P08actMAP, maps",No,No,,7/13/2025 8:22,System
+186,P08actSUM_summaries_,189,P08act_activity_ ,,,New,3,143,13-Jul-25,"activity, report, summary",No,No,,7/13/2025 8:22,System
+188,P09priMED_media_,155,P_private_ ,,,New,2,144,13-Jul-25,"Personal, Project, media",No,No,"P10proPER_personal_ , P09priMEDVID_videos_ , P09priMEDPIC_pics_ , P09priMEDAUD_audio_ ",7/13/2025 8:22,System
+192,P09priMEDAUD_audio_,188,P09priMED_media_ ,,,New,3,145,13-Jul-25,"Project, audio, media",No,No,,7/13/2025 8:22,System
+191,P09priMEDPIC_pics_,188,P09priMED_media_ ,,,New,3,146,13-Jul-25,"P09priMEDPIC, pics",No,No,,7/13/2025 8:22,System
+190,P09priMEDVID_videos_,188,P09priMED_media_ ,,,New,3,147,13-Jul-25,"Project, Resource",No,No,,7/13/2025 8:22,System
+199,P10pro_projects_,155,P_private_ ,,,New,3,148,13-Jul-25,Project,No,No,"P10proWRK_work_ , P10proPLA_plans_ ",7/13/2025 8:22,System
+198,P10proPER_personal_,188,P09priMED_media_ ,,,New,3,149,13-Jul-25,"Personal, Personal_Management",No,No,,7/13/2025 8:22,System
+197,P10proPLA_plans_,199,P10pro_projects_ ,,,New,3,150,13-Jul-25,"Important, Project, planning",No,No,,7/13/2025 8:22,System
+194,P10proWRK_work_,199,P10pro_projects_ ,,,New,3,151,13-Jul-25,"Important, Project, Work",No,No,,7/13/2025 8:22,System
+195,P11sec_secrets_,155,P_private_ ,,,New,2,152,13-Jul-25,P11sec_secrets,No,No,"P12pwd_passwords_ , P11secTXT_texts_ , P11secIMG_images_ ",7/13/2025 8:22,System
+196,P11secIMG_images_,195,P11sec_secrets_ ,,,New,3,153,13-Jul-25,"image_collection, media_assets, visual_resources",No,No,,7/13/2025 8:22,System
+193,P11secTXT_texts_,195,P11sec_secrets_ ,,,New,3,154,13-Jul-25,"Level_3, P11secTXT, P11secTXT_texts",No,No,,7/13/2025 8:22,System
+201,P12pwd_passwords_,195,P11sec_secrets_ ,,,New,3,155,13-Jul-25,"Important, Personal, password_management",No,No,"P12pwdWEB_websites_ , P12pwdSYS_systems_ , P12pwdDEV_devices_ ",7/13/2025 8:22,System
+204,P12pwdDEV_devices_,201,P12pwd_passwords_ ,,,New,3,156,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+200,P12pwdSYS_systems_,201,P12pwd_passwords_ ,,,New,3,157,13-Jul-25,"Important, Project, system_management",No,No,,7/13/2025 8:22,System
+203,P12pwdWEB_websites_,201,P12pwd_passwords_ ,,,New,3,158,13-Jul-25,"Archive, Important, Resource",No,No,,7/13/2025 8:22,System
+9,R_resources_,,,,,New,1,159,13-Jul-25,Resource,No,No,"R05dev_code_ , R06pro_projects_ , R04cap_captures_ , R03too_tools_ , R02sop_sops_ , R01gui_guides_ , R00for_forms_templates_ ",7/13/2025 8:22,System
+14,R00for_forms_templates_,9,R_resources_ ,,,New,2,160,13-Jul-25,Resource,No,No,"R00forTAX_tax_ , R00forGEN_general_ , R00forEMP_employment_ ",7/13/2025 8:22,System
+21,R00forEMP_employment_,14,R00for_forms_templates_ ,,,New,3,161,13-Jul-25,"Important, Reference, Resource",No,No,,7/13/2025 8:22,System
+17,R00forGEN_general_,14,R00for_forms_templates_ ,,,New,3,162,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+12,R00forTAX_tax_,14,R00for_forms_templates_ ,,,New,3,163,13-Jul-25,"Tax_Document, financial_record, tax_reference",No,No,,7/13/2025 8:22,System
+22,R01gui_guides_,9,R_resources_ ,,,New,2,164,13-Jul-25,Resource,No,No,"R01guiINT_internal_ , R01guiEXT_external_ ",7/13/2025 8:22,System
+23,R01guiEXT_external_,22,R01gui_guides_ ,,,New,3,165,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+20,R01guiINT_internal_,22,R01gui_guides_ ,,,New,3,166,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+19,R02sop_sops_,9,R_resources_ ,,,New,2,167,13-Jul-25,"Important, Reference, Resource",No,No,"R02sopSYS_systems_ , R02sopQIA_qially_ ",7/13/2025 8:22,System
+16,R02sopQIA_qially_,19,R02sop_sops_ ,,,New,3,168,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+18,R02sopSYS_systems_,19,R02sop_sops_ ,,,New,3,169,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+25,R03too_tools_,9,R_resources_ ,,,New,2,170,13-Jul-25,"Important, Project, Resource",No,No,"R03tooSof_software_ , R03tooSnp_snippets_ , R03tooMed_media_ , R03tooKit_kits_ ",7/13/2025 8:22,System
+30,R03tooKit_kits_,25,R03too_tools_ ,,,New,3,171,13-Jul-25,"Level3, R03tooKit, kits",No,No,,7/13/2025 8:22,System
+24,R03tooMed_media_,25,R03too_tools_ ,,,New,3,172,13-Jul-25,"Important, Project, Temporary Collection",No,No,"R03tooMedSto_stock_ , R03tooMedPri_prints_ , R03tooMedPac_packages_ , R03tooMedLog_logos_ ",7/13/2025 8:22,System
+31,R03tooMedLog_logos_,24,R03tooMed_media_ ,,,New,4,173,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+26,R03tooMedPac_packages_,24,R03tooMed_media_ ,,,New,4,174,13-Jul-25,"Important, Project",No,No,,7/13/2025 8:22,System
+27,R03tooMedPri_prints_,24,R03tooMed_media_ ,,,New,4,175,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+28,R03tooMedSto_stock_,24,R03tooMed_media_ ,,,New,4,176,13-Jul-25,"inventory_control, medical_resources, stock_management",No,No,,7/13/2025 8:22,System
+35,R03tooSnp_snippets_,25,R03too_tools_ ,,,New,3,177,13-Jul-25,Resource,No,No,,7/13/2025 8:22,System
+29,R03tooSof_software_,25,R03too_tools_ ,,,New,3,178,13-Jul-25,"Important, Project, software_development",No,No,,7/13/2025 8:22,System
+36,R04cap_captures_,9,R_resources_ ,,,New,2,179,13-Jul-25,"Important, Project, Resource",No,No,"R04capSCR_screenshots_ , R04capIMG_images_ ",7/13/2025 8:22,System
+37,R04capIMG_images_,36,R04cap_captures_ ,,,New,3,180,13-Jul-25,image_collection,No,No,,7/13/2025 8:22,System
+33,R04capSCR_screenshots_,36,R04cap_captures_ ,,,New,3,181,13-Jul-25,"Project, Resource, screenshots",No,No,,7/13/2025 8:22,System
+32,R05dev_code_,9,R_resources_ ,,,New,2,182,13-Jul-25,"Important, Project, Resource",No,No,"R05devLis_lists_ , R05devScr_scripts_ , R05devPro_projects_ , R05devImp_imports_ , R05devFil_filetypes_ , R05devExp_exports_ , R05devApp_apps_ ",7/13/2025 8:22,System
+56,R05devApp_apps_,32,R05dev_code_ ,,,New,3,183,13-Jul-25,"Important, Project, app_development",No,No,"R05devAppTem_templates_ , R05devAppMIS_misc_ , R05devAppCom_common_ , R05devAppBkm_bookmarklets_ , R05devAppAHK_ahk_ ",7/13/2025 8:22,System
+52,R05devAppAHK_ahk_,56,R05devApp_apps_ ,,,New,4,184,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+58,R05devAppBkm_bookmarklets_,56,R05devApp_apps_ ,,,New,4,185,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+55,R05devAppCom_common_,56,R05devApp_apps_ ,,,New,4,186,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+54,R05devAppMIS_misc_,56,R05devApp_apps_ ,,,New,4,187,13-Jul-25,"R05devAppMIS, application, development",No,No,,7/13/2025 8:22,System
+50,R05devAppTem_templates_,56,R05devApp_apps_ ,,,New,4,188,13-Jul-25,"application, development, template",No,No,,7/13/2025 8:22,System
+59,R05devExp_exports_,32,R05dev_code_ ,,,New,3,189,13-Jul-25,"Important, Project, Reference",No,No,,7/13/2025 8:22,System
+48,R05devFil_filetypes_,32,R05dev_code_ ,,,New,3,190,13-Jul-25,Project,No,No,"R05devFilPY_py_ , R05devFilPLI_plist_ , R05devFilMIS_misc_ , R05devFilJSN_json_ , R05devFilJAV_java_ , R05devFilHTM_html_ , R05devFilCSS_css_ ",7/13/2025 8:22,System
+40,R05devFilCSS_css_,48,R05devFil_filetypes_ ,,,New,4,191,13-Jul-25,"CSS_Development, Project",No,No,,7/13/2025 8:22,System
+45,R05devFilHTM_html_,48,R05devFil_filetypes_ ,,,New,4,192,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+43,R05devFilJAV_java_,48,R05devFil_filetypes_ ,,,New,4,193,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+42,R05devFilJSN_json_,48,R05devFil_filetypes_ ,,,New,4,194,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+46,R05devFilMIS_misc_,48,R05devFil_filetypes_ ,,,New,4,195,13-Jul-25,"Important, Project",No,No,,7/13/2025 8:22,System
+41,R05devFilPLI_plist_,48,R05devFil_filetypes_ ,,,New,4,196,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+47,R05devFilPY_py_,48,R05devFil_filetypes_ ,,,New,4,197,13-Jul-25,"development, programming, software",No,No,,7/13/2025 8:22,System
+39,R05devImp_imports_,32,R05dev_code_ ,,,New,3,198,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+44,R05devLis_lists_,32,R05dev_code_ ,,,New,3,199,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+34,R05devPro_projects_,32,R05dev_code_ ,,,New,3,200,13-Jul-25,"Important, Project, Workspace",No,No,,7/13/2025 8:22,System
+38,R05devScr_scripts_,32,R05dev_code_ ,,,New,3,201,13-Jul-25,"Important, Project, Resource",No,No,,7/13/2025 8:22,System
+57,R06pro_projects_,9,R_resources_ ,,,New,2,202,13-Jul-25,Project,No,No,"R06proPUB_public_ , R06proINT_internal_ , R06proCLI_client_ ",7/13/2025 8:22,System
+51,R06proCLI_client_,57,R06pro_projects_ ,,,New,3,203,13-Jul-25,"Important, Project",No,No,,7/13/2025 8:22,System
+53,R06proINT_internal_,57,R06pro_projects_ ,,,New,3,204,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+49,R06proPUB_public_,57,R06pro_projects_ ,,,New,3,205,13-Jul-25,Project,No,No,,7/13/2025 8:22,System
+202,Z_archive_,,,,,New,1,206,13-Jul-25,Archive,No,No,,7/13/2025 8:22,System

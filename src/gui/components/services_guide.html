@@ -1,0 +1,35 @@
+<div id="services-container" style="display: flex; flex-wrap: wrap; gap: 1rem;"></div>
+
+<script>
+// 👉 Replace this with your real CSV URL if hosted (like on Cloudinary or GitHub)
+const csvUrl = "https://YOURDOMAIN.com/services_with_images.csv";
+
+function createServiceCard(name, slug, imgUrl) {
+  const card = document.createElement("div");
+  card.style.width = "150px";
+  card.style.textAlign = "center";
+  card.innerHTML = `
+    <img src="${imgUrl}" alt="${name}" style="width: 100%; border-radius: 8px;" />
+    <p style="margin-top: 0.5rem; font-weight: bold;">${name}</p>
+  `;
+  return card;
+}
+
+fetch(csvUrl)
+  .then(response => response.text())
+  .then(text => {
+    const rows = text.split("\n").slice(1); // Skip header
+    const container = document.getElementById("services-container");
+
+    rows.forEach(row => {
+      const [serviceName, imagePrompt, serviceSlug, imageUrl] = row.split(",");
+      if (imageUrl) {
+        const card = createServiceCard(serviceName, serviceSlug, imageUrl.trim());
+        container.appendChild(card);
+      }
+    });
+  })
+  .catch(err => {
+    console.error("❌ Failed to load services CSV:", err);
+  });
+</script>

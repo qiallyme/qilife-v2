@@ -3,6 +3,7 @@
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+from typing import Optional
 
 # Always resolve to the project root (2 levels up from /config/)
 env_path = Path(__file__).resolve().parents[2] / ".env"
@@ -27,13 +28,18 @@ def get_env() -> dict:
         "TWILIO_ACCOUNT_SID":      os.getenv("TWILIO_ACCOUNT_SID"),
         "TWILIO_AUTH_TOKEN":       os.getenv("TWILIO_AUTH_TOKEN"),
         "TWILIO_ACCOUNT_ID":       os.getenv("TWILIO_ACCOUNT_ID"),
+        "CLOUDINARY_API_KEY":      os.getenv("CLOUDINARY_API_KEY"),
+        "CLOUDINARY_API_SECRET":   os.getenv("CLOUDINARY_API_SECRET"),
+        "CLOUDINARY_CLOUD_NAME":   os.getenv("CLOUDINARY_CLOUD_NAME"),
+        "CLOUDINARY_URL":          os.getenv("CLOUDINARY_URL"),
     }
-
-def get_value(key: str, fallback: str = None) -> str:
+def get_value(key: str, fallback: Optional[str] = None) -> str:
     """
     Retrieve a single environment variable by key with optional fallback.
+    Always returns a string.
     """
-    return os.getenv(key, fallback)
+    value = os.getenv(key, fallback)
+    return value if value is not None else (fallback if fallback is not None else "")
 
 def update_env(key: str, value: str, verbose: bool = True):
     """
@@ -70,6 +76,6 @@ def get_module_key(module: str) -> str:
     key_value = os.getenv(key_name)
 
     if not key_value or key_value.strip().lower() == "missing":
-        return os.getenv("OPENAI_API_KEY_MAIN")
+        return os.getenv("OPENAI_API_KEY_MAIN", "")
 
     return key_value

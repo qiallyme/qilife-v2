@@ -1,230 +1,136 @@
+#!/usr/bin/env python3
+# src/fileflow/content_extractor.py
+
+import sys
 import os
-import base64
+import subprocess
 from pathlib import Path
-from typing import Dict, Optional, Any
-import mimetypes
+from datetime import datetime
 
-# PDF processing
-try:
-    import PyPDF2
-    import pdfplumber
-except ImportError:
-    PyPDF2 = None
-    pdfplumber = None
+# Text extraction
+import pytesseract            # pip install pytesseract
+from PIL import Image         # pip install Pillow
+import pdfplumber             # pip install pdfplumber
+import docx                   # pip install python-docx
+from pptx import Presentation # pip install python-pptx
+import pandas as pd           # pip install pandas
 
-# Word document processing
-try:
-    from docx import Document
-except ImportError:
-    Document = None
+# Audio/video transcription (lazy OpenAI client)
+from openai import OpenAI     # pip install openai
 
-# Image processing and OCR
-try:
-    from PIL import Image
-    import pytesseract
-except ImportError:
-    Image = None
-    pytesseract = None
+def extract_text(path: Path) -> str:
+    suffix = path.suffix.lower()
 
-from src.tools.utils.logging_utils import LoggingUtils
+    # 1. Plain text & code
+    if suffix in {".txt", ".md", ".py", ".js", ".java", ".html", ".css", ".json", ".xml", ".eml", ".mhtml"}:
+        return path.read_text(encoding="utf-8", errors="ignore")
 
-class ContentExtractor:
-    """Extract content from various file formats"""
-    
-    def __init__(self):
-        self.logger = LoggingUtils()
-        self.supported_formats = {
-            'pdf': self._extract_pdf,
-            'docx': self._extract_docx,
-            'doc': self._extract_docx,  # Attempt with docx library
-            'txt': self._extract_text,
-            'md': self._extract_text,
-            'jpg': self._extract_image,
-            'jpeg': self._extract_image,
-            'png': self._extract_image,
-            'bmp': self._extract_image,
-            'tiff': self._extract_image,
-        }
-    
-    def extract_content(self, file_path: str) -> Optional[Dict[str, Any]]:
-        """Extract content from a file based on its format"""
+    # 2. PDF
+    if suffix == ".pdf":
+        pages = []
+        with pdfplumber.open(path) as pdf:
+            for p in pdf.pages:
+                pages.append(p.extract_text() or "")
+        return "\n".join(pages)
+
+    # 3. Word .docx
+    if suffix == ".docx":
+        doc = docx.Document(path)
+        return "\n".join(p.text for p in doc.paragraphs)
+
+    # 4. PowerPoint .pptx
+    if suffix == ".pptx":
+        prs = Presentation(str(path))
+        texts = []
+        for slide in prs.slides:
+            for shape in slide.shapes:
+                if hasattr(shape, "text"):
+                    texts.append(shape.text)
+        return "\n".join(texts)
+
+    # 5. Spreadsheets (.xls/.xlsx/.csv)
+    if suffix in {".xls", ".xlsx"}:
         try:
-            file_path_obj = Path(file_path)
-            
-            # Check if file exists and is readable
-            if not file_path_obj.exists() or not file_path_obj.is_file():
-                return None
-            
-            # Get file extension
-            extension = file_path_obj.suffix.lower().lstrip('.')
-            
-            # Get basic metadata
-            stat = file_path_obj.stat()
-            metadata = {
-                'file_path': str(file_path_obj),
-                'file_name': file_path_obj.name,
-                'file_size': stat.st_size,
-                'created_time': stat.st_ctime,
-                'modified_time': stat.st_mtime,
-                'extension': extension,
-                'mime_type': mimetypes.guess_type(str(file_path_obj))[0] or 'unknown'
-            }
-            
-            # Extract content based on file type
-            if extension in self.supported_formats:
-                content = self.supported_formats[extension](file_path_obj)
-                if content:
-                    return {
-                        'content': content,
-                        'metadata': metadata
-                    }
-            
-            self.logger.log_activity(
-                "unsupported_format",
-                f"Unsupported file format: {extension}",
-                {"file_path": str(file_path_obj), "extension": extension}
-            )
-            return None
-            
-        except Exception as e:
-            self.logger.log_activity(
-                "content_extraction_error",
-                f"Error extracting content from {file_path}: {str(e)}",
-                {"file_path": file_path, "error": str(e)}
-            )
-            return None
-    
-    def _extract_pdf(self, file_path: Path) -> Optional[str]:
-        """Extract text from PDF files"""
-        try:
-            # Try with pdfplumber first (better for complex layouts)
-            if pdfplumber:
-                with pdfplumber.open(file_path) as pdf:
-                    text_content = []
-                    for page in pdf.pages:
-                        text = page.extract_text()
-                        if text:
-                            text_content.append(text)
-                    
-                    if text_content:
-                        return '\n\n'.join(text_content)
-            
-            # Fallback to PyPDF2
-            if PyPDF2:
-                with open(file_path, 'rb') as file:
-                    pdf_reader = PyPDF2.PdfReader(file)
-                    text_content = []
-                    
-                    for page in pdf_reader.pages:
-                        text = page.extract_text()
-                        if text:
-                            text_content.append(text)
-                    
-                    if text_content:
-                        return '\n\n'.join(text_content)
-            
-            return None
-            
-        except Exception as e:
-            self.logger.log_activity(
-                "pdf_extraction_error",
-                f"Error extracting PDF content: {str(e)}",
-                {"file_path": str(file_path), "error": str(e)}
-            )
-            return None
-    
-    def _extract_docx(self, file_path: Path) -> Optional[str]:
-        """Extract text from Word documents"""
-        try:
-            if not Document:
-                return None
-            
-            doc = Document(file_path)
-            text_content = []
-            
-            # Extract text from paragraphs
-            for paragraph in doc.paragraphs:
-                if paragraph.text.strip():
-                    text_content.append(paragraph.text)
-            
-            # Extract text from tables
-            for table in doc.tables:
-                for row in table.rows:
-                    row_text = []
-                    for cell in row.cells:
-                        if cell.text.strip():
-                            row_text.append(cell.text.strip())
-                    if row_text:
-                        text_content.append(' | '.join(row_text))
-            
-            return '\n\n'.join(text_content) if text_content else None
-            
-        except Exception as e:
-            self.logger.log_activity(
-                "docx_extraction_error",
-                f"Error extracting Word document content: {str(e)}",
-                {"file_path": str(file_path), "error": str(e)}
-            )
-            return None
-    
-    def _extract_text(self, file_path: Path) -> Optional[str]:
-        """Extract content from plain text files"""
-        try:
-            # Try different encodings
-            encodings = ['utf-8', 'utf-16', 'latin-1', 'cp1252']
-            
-            for encoding in encodings:
-                try:
-                    with open(file_path, 'r', encoding=encoding) as file:
-                        content = file.read()
-                        return content.strip() if content.strip() else None
-                except UnicodeDecodeError:
-                    continue
-            
-            return None
-            
-        except Exception as e:
-            self.logger.log_activity(
-                "text_extraction_error",
-                f"Error extracting text content: {str(e)}",
-                {"file_path": str(file_path), "error": str(e)}
-            )
-            return None
-    
-    def _extract_image(self, file_path: Path) -> Optional[str]:
-        """Extract text from images using OCR"""
-        try:
-            if not Image or not pytesseract:
-                return None
-            
-            # Open and process image
-            with Image.open(file_path) as img:
-                # Convert to RGB if necessary
-                if img.mode != 'RGB':
-                    img = img.convert('RGB')
-                
-                # Perform OCR
-                text = pytesseract.image_to_string(img, lang='eng')
-                
-                return text.strip() if text.strip() else None
-                
-        except Exception as e:
-            self.logger.log_activity(
-                "image_extraction_error",
-                f"Error extracting text from image: {str(e)}",
-                {"file_path": str(file_path), "error": str(e)}
-            )
-            return None
-    
-    def get_image_base64(self, file_path: str) -> Optional[str]:
-        """Convert image to base64 for AI analysis"""
-        try:
-            with open(file_path, 'rb') as image_file:
-                return base64.b64encode(image_file.read()).decode('utf-8')
-        except Exception as e:
-            self.logger.log_activity(
-                "image_base64_error",
-                f"Error converting image to base64: {str(e)}",
-                {"file_path": file_path, "error": str(e)}
-            )
-            return None
+            df = pd.read_excel(path, engine="openpyxl")
+        except Exception:
+            df = pd.read_csv(path)
+        return df.to_csv(index=False)
+    if suffix == ".csv":
+        df = pd.read_csv(path)
+        return df.to_csv(index=False)
+
+    # 6. Images → OCR
+    if suffix in {".png", ".jpg", ".jpeg", ".tiff", ".bmp", ".gif"}:
+        img = Image.open(path)
+        return pytesseract.image_to_string(img)
+
+    # 7. Audio → Whisper
+    if suffix in {".wav", ".mp3", ".m4a", ".flac"}:
+        return _transcribe_audio(path)
+
+    # 8. Video → extract audio + Whisper
+    if suffix in {".mp4", ".mov", ".avi", ".mkv"}:
+        return _transcribe_audio(path, is_video=True)
+
+    # 9. Fallback → nothing
+    return ""
+
+def _transcribe_audio(path: Path, is_video: bool = False) -> str:
+    """
+    Uses ffmpeg to convert/extract audio and Whisper for transcription.
+    Requires OPENAI_API_KEY in environment.
+    """
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        print("[yellow]⚠️ OPENAI_API_KEY not set – skipping transcription[/]")
+        return ""
+
+    # prepare wav
+    wav = path.with_suffix(".wav")
+    cmd = ["ffmpeg", "-y", "-i", str(path)]
+    if is_video:
+        cmd += ["-vn"]
+    cmd += ["-ar", "16000", "-ac", "1", str(wav)]
+    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    # lazy-init client
+    client = OpenAI(api_key=api_key)
+    with open(wav, "rb") as f:
+        resp = client.audio.transcriptions.create(model="whisper-1", file=f)
+    return resp.text
+
+def extract_metadata(path: Path) -> dict:
+    stat = path.stat()
+    return {
+        "filename": path.name,
+        "extension": path.suffix.lower(),
+        "size_bytes": stat.st_size,
+        "created": datetime.fromtimestamp(stat.st_ctime).isoformat(),
+        "modified": datetime.fromtimestamp(stat.st_mtime).isoformat(),
+    }
+
+def extract_context(path: Path) -> dict:
+    """
+    Returns:
+      - 'text': extracted text or transcript
+      - 'metadata': file metadata
+    """
+    return {
+        "text": extract_text(path),
+        "metadata": extract_metadata(path)
+    }
+
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: content_extractor.py /path/to/file")
+        sys.exit(1)
+    p = Path(sys.argv[1])
+    if not p.exists():
+        print(f"File not found: {p}")
+        sys.exit(1)
+    ctx = extract_context(p)
+    print("--- METADATA ---")
+    for k, v in ctx["metadata"].items():
+        print(f"{k}: {v}")
+    print("\n--- TEXT PREVIEW ---\n")
+    print(ctx["text"][:2000] + "\n…")

@@ -1,1 +1,0 @@
-python tests/test_config_env.py
