@@ -1,41 +1,44 @@
+import React from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+// 🔥 Direct SVG imports (cleaner than require)
+import QIDocsSocial from '@site/static/img/qidocssocial.svg';
+import QIDocsHearts from '@site/static/img/qidocshearts.svg';
+import QIDocsPage from '@site/static/img/qidocspage.svg';
+
 const FeatureList = [
   {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: QIDocsSocial,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        QiDocs was designed from the ground up as a QiLife module to quickly organize QiNotes and restore clarity in your digital world.
       </>
     ),
   },
   {
     title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: QIDocsHearts,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Move your chaos into order. QiDocs helps you build a calm, navigable brain that grows with you, not against you.
       </>
     ),
   },
   {
     title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: QIDocsPage,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Extend or customize your system with full control. Docusaurus gives you a stable foundation — QiLife takes it quantum.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">

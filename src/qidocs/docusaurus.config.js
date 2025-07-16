@@ -51,7 +51,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/codyr/qilife-main/tree/main/src/qidocs/',
         },
         blog: {
           showReadingTime: true,
@@ -62,7 +62,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/codyr/qilife-main/tree/main/src/qidocs/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -84,12 +84,12 @@ const config = {
         disableSwitch: false, // set to true to force dark mode with no toggle
       },
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/qidocssocial.jpg',
       navbar: {
         title: 'QiDocs',
         logo: {
           alt: 'QiDocs Logo',
-          src: 'qidocslogo.png',
+          src: 'img/qidocslogotransparent.png',
         },
         items: [
           {
